@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class='navbar'>
+  <view wx:for='{{allCategories}}'
+        wx:key='{{index}}'
+        data-cat-abbr='{{item.abbr}}'
+        bindtap='onTapCategory'
+        class="{{item.abbr === currCatetoryAbbr ? 'nav-item active' : 'nav-item'}}">
+    {{item.name}}
+  </view>
+</view>
+<view class='articles'>
+  <view wx:for='{{articles}}' wx:key='{{item.id}}' class='article'>
+    <view class='summary'>
+      <view class='title'>{{item.title}}</view>
+      <view class='source-date'>
+        <text class='source'>{{item.source}}</text>
+        <text class='date'>{{item.date}}</text>
+      </view>
+    </view>
+    <image class='img' mode='widthFix' src='{{item.firstImage}}'></image>
+  </view>
+</view>

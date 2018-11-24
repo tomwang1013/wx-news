@@ -1,0 +1,66 @@
+/* index.wxss */
+.navbar {
+  display: flex;
+  background-color: #0366d6;
+}
+
+.nav-item {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  color: #ccc;
+  font-size: 40rpx;
+  line-height: 2;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-item.active {
+  color: #fff;
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  width: 40rpx;
+  height: 6rpx;
+  background-color: #fff;
+  margin: auto;
+  bottom: 4rpx;
+  left: 0;
+  right: 0;
+}
+
+.articles {
+  margin: 0 20rpx;
+}
+
+.article {
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #ccc;
+  align-items: center;
+}
+
+.summary {
+  flex: 3;
+  margin-right: 20rpx;
+}
+
+.title {
+  margin-bottom: 20rpx;
+  font-size: 32rpx;
+  line-height: 40rpx;
+}
+
+.source-date {
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.source {
+  margin-right: 20rpx;
+}
+
+.img {
+  flex: 1;
+}
