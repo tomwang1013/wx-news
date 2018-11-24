@@ -1,4 +1,8 @@
 <!--index.wxml-->
+<view class='sys-nav'>
+  <image class='icon' src='/images/icons8-news-48.png'></image>
+  <text>快读.资讯</text>
+</view>
 <view class='navbar'>
   <view wx:for='{{allCategories}}'
         wx:key='{{index}}'
@@ -9,14 +13,18 @@
   </view>
 </view>
 <view class='articles'>
-  <view wx:for='{{articles}}' wx:key='{{item.id}}' class='article'>
+  <view wx:for='{{articles}}' wx:key='{{item.id}}'
+        data-id='{{item.id}}'
+        bindtap='onArticleTap' 
+        class='article'>
     <view class='summary'>
       <view class='title'>{{item.title}}</view>
       <view class='source-date'>
-        <text class='source'>{{item.source}}</text>
+        <text wx:if='{{item.source}}' class='source'>{{item.source}}</text>
         <text class='date'>{{item.date}}</text>
       </view>
     </view>
-    <image class='img' mode='widthFix' src='{{item.firstImage}}'></image>
+    <image class='img' mode='widthFix' 
+           src='{{item.firstImage || "/images/default.png"}}'></image>
   </view>
 </view>

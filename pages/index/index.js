@@ -64,6 +64,15 @@ Page({
   },
 
   /**
+   * 点击进入详情页
+   */
+  onArticleTap(e) {
+    wx.navigateTo({
+      url: '/pages/article/article?id=' + e.currentTarget.dataset.id
+    })
+  },
+
+  /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {

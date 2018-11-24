@@ -1,2 +1,17 @@
 <!--article/article.wxml-->
-<text>article/article.wxml</text>
+<view class='sys-nav'>
+  <image bindtap='goBack' class='back-icon' src='/images/icons8-back-48.png'></image>
+  <text>快读.资讯</text>
+</view>
+<view class='root'>
+  <view class='title'>{{detail.title}}</view>
+  <view class='meta-info'>
+    <text wx:if='{{detail.source}}' class='source'>{{detail.source}}</text>
+    <text class='date'>{{detail.date}}</text>
+    <text class='read-count'>阅读量 {{detail.readCount}}</text>
+  </view>
+  <image wx:if='{{detail.firstImage}}' src='{{detail.firstImage}}'></image>
+  <view wx:for='{{detail.content}}' 
+        wx:key='{{index}}'
+        class='section'>{{item.text}}</view>
+</view>
