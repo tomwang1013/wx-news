@@ -1,0 +1,6 @@
+<template name="sysNav">
+  <view class='sys-nav'>
+    <image class='icon' bindtap='{{tapHandler}}' src='{{iconSrc}}'></image>
+    <text>快读.资讯</text>
+  </view>
+</template>

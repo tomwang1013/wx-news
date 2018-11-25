@@ -1,0 +1,20 @@
+.sys-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  padding-left: 20rpx;
+  padding-top: 50rpx;
+  height: 96rpx;
+  line-height: 96rpx;
+  background-color: #0366d6;
+  color: #fff;
+  font-size: 32rpx;
+}
+
+.icon {
+  margin-right: 8rpx;
+  vertical-align: middle;
+  width: 48rpx;
+  height: 48rpx;
+}

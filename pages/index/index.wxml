@@ -1,8 +1,5 @@
-<!--index.wxml-->
-<view class='sys-nav'>
-  <image class='icon' src='/images/icons8-news-48.png'></image>
-  <text>快读.资讯</text>
-</view>
+<import src='../sys-nav.wxml'/>
+<template is='sysNav' data='{{iconSrc: "/images/icons8-news-48.png"}}'/>
 <view class='navbar'>
   <view wx:for='{{allCategories}}'
         wx:key='{{index}}'
