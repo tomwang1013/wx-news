@@ -17,6 +17,10 @@
   color: #ccc;
 }
 
+.source {
+  margin-right: 20rpx;
+}
+
 .read-count {
   margin-left: auto;
 }
