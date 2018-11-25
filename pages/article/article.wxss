@@ -8,7 +8,6 @@
   padding-top: 50rpx;
   height: 96rpx;
   line-height: 96rpx;
-  border-bottom: 2rpx solid #0366d6;
   background-color: #0366d6;
   color: #fff;
   font-size: 32rpx;
