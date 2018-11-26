@@ -7,8 +7,10 @@
     <text class='date'>{{detail.date}}</text>
     <text class='read-count'>阅读量 {{detail.readCount}}</text>
   </view>
-  <image wx:if='{{detail.firstImage}}' src='{{detail.firstImage}}'></image>
-  <view wx:for='{{detail.content}}' 
-        wx:key='{{index}}'
-        class='section'>{{item.text}}</view>
+  <block wx:for='{{detail.content}}' 
+         wx:key='{{index}}'>
+    <view wx:if='{{item.type === "p"}}' class='section'>{{item.text}}</view>
+    <image wx:if='{{item.type === "image"}}' src='{{item.src}}' class='section'/>
+    <text wx:if='{{item.type === "strong"}}' style='font-weight: bold'>{{item.text}}</text>
+  </block>
 </view>

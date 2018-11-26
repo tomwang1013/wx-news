@@ -18,10 +18,14 @@ Page({
       success: res => {
         const r = res.data.result;
         const t = new Date(r.date);
-        r.date = t.getHours() + ':' + t.getMinutes();
+        r.date = t.toLocaleString();
+        r.source = r.source || '默认来源';
         this.setData({
           detail: res.data.result
         });
+      },
+      fail: err => {
+        console.error('获取新闻详情：', err);
       },
       complete: () => {
         callback && callback()

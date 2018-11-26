@@ -15,10 +15,14 @@ Page({
         this.setData({
           articles: res.data.result.map(r => {
             const t = new Date(r.date);
-            r.date = t.getHours() + ':' + t.getMinutes();
+            r.date = t.toLocaleString();
+            r.source = r.source || '默认来源';
             return r;
           })
         });
+      },
+      fail: err => {
+        console.error('获取新闻列表失败：', err);
       },
       complete: () => {
         callback && callback()
