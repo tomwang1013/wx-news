@@ -18,7 +18,7 @@ Page({
       success: res => {
         const r = res.data.result;
         const t = new Date(r.date);
-        r.date = t.toLocaleString();
+        r.date = `${t.getFullYear()}-${t.getMonth()}-${t.getDate()} ${t.getHours()}:${t.getMinutes()}`;
         r.source = r.source || '默认来源';
         this.setData({
           detail: res.data.result
