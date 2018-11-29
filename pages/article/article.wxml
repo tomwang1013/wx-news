@@ -1,5 +1,3 @@
-<import src='../sys-nav.wxml'/>
-<template is='sysNav' data='{{iconSrc: "/images/icons8-back-48.png", tapHandler: "goBack"}}'/>
 <view class='root'>
   <view class='title'>{{detail.title}}</view>
   <view class='meta-info'>

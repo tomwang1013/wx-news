@@ -1,7 +1,4 @@
-@import '../sys-nav.wxss';
-
 .root {
-  margin-top: 145rpx;
   padding: 20rpx;
 }
 

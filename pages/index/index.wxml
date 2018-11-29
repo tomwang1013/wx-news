@@ -1,5 +1,3 @@
-<import src='../sys-nav.wxml'/>
-<template is='sysNav' data='{{iconSrc: "/images/icons8-news-48.png"}}'/>
 <view class='navbar'>
   <view wx:for='{{allCategories}}'
         wx:key='{{index}}'

@@ -1,7 +1,4 @@
-@import '../sys-nav.wxss';
-
 .navbar {
-  margin-top: 145rpx;
   display: flex;
   background-color: #0366d6;
 }
